@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import MainPage from "./Components/MainPage";
 import Header from "./Components/header";
@@ -19,7 +19,6 @@ import HomeDetails from "./Components/Homedetails";
 
 function App() {
   return (
-    <Router>
       <div className="App">
         {/* Define routes for different pages */}
         <Routes>
@@ -36,11 +35,8 @@ function App() {
           <Route path="/payment-confirmation" element={<PaymentConfirmation/>} />
           <Route path="/life-details" element={<LifeDetails/>} />
           <Route path="/home-details" element={<HomeDetails/>} />
-
-
         </Routes>
       </div>
-    </Router>
   );
 }
 
